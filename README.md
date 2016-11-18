@@ -1,2 +1,5 @@
-# L293D-Tester-Arduino
-With this code you can test your L293D motor driver IC easily. 
+#Simple Arduino Codes for Testing Basic Hardwares.
+
+Index List: 
+Motor Driver Testing
+ArduinoCodes/Motor-Tester.ino

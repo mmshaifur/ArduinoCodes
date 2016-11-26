@@ -109,4 +109,3 @@ digitalWrite(RightMotorA, LOW);
 digitalWrite(RightMotorB, LOW);
 delay(5); 
 }
-//This is function is not used in Testing.

@@ -3,6 +3,7 @@
   Date      : 01 April 2018
   Device(s) : Arduino UNO, I2C Module, 1602 LCD Display
   For More  : http://banglarobotics.com/en/Arduinoi2cScanner
+  Version   : 1.0
 */
 
 #include <Wire.h>

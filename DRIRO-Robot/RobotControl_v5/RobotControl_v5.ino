@@ -1,6 +1,5 @@
-
-const int CH_1 = 7;
-const int CH_3 = 6;
+int CH_1 = 7;
+int CH_3 = 6;
 int CH_1_read;
 int CH_3_read;
 int leftMotor_c1 = 12;
@@ -71,17 +70,24 @@ void left() {
   digitalWrite(leftMotor_c1, LOW);
   digitalWrite(leftMotor_c2, HIGH);
   delay(50);
-   digitalWrite(leftMotor_c2, LOW);
-   delay(25);
+  digitalWrite(leftMotor_c2, LOW);
+  delay(50);
   digitalWrite(rightMotor_c1, HIGH);
   digitalWrite(rightMotor_c2, LOW);
   delay(100);
+  digitalWrite(rightMotor_c1, LOW);
 }
 void right() {
   digitalWrite(leftMotor_c1, HIGH);
   digitalWrite(leftMotor_c2, LOW);
+  delay(50);
+  digitalWrite(leftMotor_c1, LOW);
+  delay(50);
   digitalWrite(rightMotor_c1, LOW);
   digitalWrite(rightMotor_c2, HIGH);
+  delay(100);
+  digitalWrite(rightMotor_c2, LOW);
+
 }
 void Stop() {
   digitalWrite(leftMotor_c1, LOW);

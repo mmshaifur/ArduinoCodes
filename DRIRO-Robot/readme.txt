@@ -1,1 +1,1 @@
-DRIRO = distantly remote improvised robotic operator
+Acronyme of DRIRO is Distantly Remote Improvised Robotic Operator

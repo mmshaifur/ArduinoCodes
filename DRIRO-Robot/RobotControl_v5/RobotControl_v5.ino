@@ -3,24 +3,24 @@ const int CH_1 = 7;
 const int CH_3 = 6;
 int CH_1_read;
 int CH_3_read;
-int m1_c1 = 12;
-int m1_c2 = 11;
-int m2_c1 = 10;
-int m2_c2 = 9;
+int leftMotor_c1 = 12;
+int leftMotor_c2 = 11;
+int rightMotor_c1 = 10;
+int rightMotor_c2 = 9;
 
 void setup() {
   Serial.begin(115200);
   pinMode(CH_1, INPUT);
   pinMode(CH_3, INPUT);
   delay(500);
-   pinMode(m1_c1, OUTPUT);
-  pinMode(m1_c2, OUTPUT);
-  pinMode(m2_c1, OUTPUT);
-  pinMode(m2_c2, OUTPUT);
-  digitalWrite(m1_c1,LOW);
-  digitalWrite(m1_c2,LOW);
-  digitalWrite(m2_c1,LOW);
-  digitalWrite(m2_c2,LOW);
+  pinMode(leftMotor_c1, OUTPUT);
+  pinMode(leftMotor_c2, OUTPUT);
+  pinMode(rightMotor_c1, OUTPUT);
+  pinMode(rightMotor_c2, OUTPUT);
+  digitalWrite(leftMotor_c1, LOW);
+  digitalWrite(leftMotor_c2, LOW);
+  digitalWrite(rightMotor_c1, LOW);
+  digitalWrite(rightMotor_c2, LOW);
 }
 void loop() {
   CH_1_read = pulseIn (CH_1, HIGH);
@@ -54,33 +54,37 @@ void loop() {
 
 
 void forward() {
-  digitalWrite(m1_c1, HIGH);
-  digitalWrite(m1_c2, LOW);
-  digitalWrite(m2_c1, HIGH);
-  digitalWrite(m2_c2, LOW);
+  digitalWrite(leftMotor_c1, HIGH);
+  digitalWrite(leftMotor_c2, LOW);
+  digitalWrite(rightMotor_c1, HIGH);
+  digitalWrite(rightMotor_c2, LOW);
+  delay(25);
 }
 void back() {
-  digitalWrite(m1_c1, LOW);
-  digitalWrite(m1_c2, HIGH);
-  digitalWrite(m2_c1, LOW);
-  digitalWrite(m2_c2, HIGH);
+  digitalWrite(leftMotor_c1, LOW);
+  digitalWrite(leftMotor_c2, HIGH);
+  digitalWrite(rightMotor_c1, LOW);
+  digitalWrite(rightMotor_c2, HIGH);
+  delay(25);
 }
 void left() {
-  digitalWrite(m1_c1, LOW);
-  digitalWrite(m1_c2, HIGH);
-  digitalWrite(m2_c1, HIGH);
-  digitalWrite(m2_c2, LOW);
+  digitalWrite(leftMotor_c1, LOW);
+  digitalWrite(leftMotor_c2, HIGH);
+  delay(100);
+   digitalWrite(leftMotor_c2, LOW);
+  digitalWrite(rightMotor_c1, HIGH);
+  digitalWrite(rightMotor_c2, LOW);
 }
 void right() {
-  digitalWrite(m1_c1, HIGH);
-  digitalWrite(m1_c2, LOW);
-  digitalWrite(m2_c1, LOW);
-  digitalWrite(m2_c2, HIGH);
+  digitalWrite(leftMotor_c1, HIGH);
+  digitalWrite(leftMotor_c2, LOW);
+  digitalWrite(rightMotor_c1, LOW);
+  digitalWrite(rightMotor_c2, HIGH);
 }
 void Stop() {
-  digitalWrite(m1_c1, LOW);
-  digitalWrite(m1_c2, LOW);
-  digitalWrite(m2_c1, LOW);
-  digitalWrite(m2_c2, LOW);
+  digitalWrite(leftMotor_c1, LOW);
+  digitalWrite(leftMotor_c2, LOW);
+  digitalWrite(rightMotor_c1, LOW);
+  digitalWrite(rightMotor_c2, LOW);
 }
 

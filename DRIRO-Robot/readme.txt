@@ -1,0 +1,1 @@
+DRIRO = distantly remote improvised robotic operator

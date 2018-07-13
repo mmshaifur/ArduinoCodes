@@ -70,10 +70,12 @@ void back() {
 void left() {
   digitalWrite(leftMotor_c1, LOW);
   digitalWrite(leftMotor_c2, HIGH);
-  delay(100);
+  delay(50);
    digitalWrite(leftMotor_c2, LOW);
+   delay(25);
   digitalWrite(rightMotor_c1, HIGH);
   digitalWrite(rightMotor_c2, LOW);
+  delay(100);
 }
 void right() {
   digitalWrite(leftMotor_c1, HIGH);
